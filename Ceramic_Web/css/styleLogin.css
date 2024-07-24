@@ -1,0 +1,51 @@
+*{
+    margin: 0; /*Elimina el margen predeterminado de todos los elementos*/
+    padding: 0; /*Elimina el relleno predeterminado de todos los elementos*/
+}
+
+form {
+    width: 350px;
+    height:400px;
+    background-color: brown;
+    padding-top: 20px;
+    margin: 50px auto;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -10px 20px 15px 10 px gray;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30 px;
+}
+
+input{
+    font-size: 16px;
+    padding: 8px; /* Hace que el componente se extiendan en todos los sentidos*/
+    display: block; /*Para que se visualice como un bloque*/
+    margin: 10px auto; /*Para asignar las margenes, separacion de 10 */
+}
+
+label{
+    color: white;
+    display: block;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type= 'button']{
+    width: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: block;
+    background-color: chocolate;
+    cursor: pointer; /*hace que salga la manito*/
+}
+
+input[type= 'button']:hover{
+    background-color: coral; /*cambia el color del fondo del boton*/
+}

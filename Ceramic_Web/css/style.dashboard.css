@@ -1,0 +1,95 @@
+body{
+    display: flex; /*Utiliza el modelo de caja flexible para el diseño de la pagina*/
+    min-height: 100vh; /*Establece una altura minima de la pnatalla completa*/
+    margin: 0; /*Elimina el margen predeterminado del cuerpo*/
+    font-family: Arial, sans-serif; /*Establece la fuente de texto*/
+}
+
+.sidebar{
+    width: 12.5%;
+    background-color: #442232;
+    padding: 20px;
+    height: 100vh;
+    position: fixed; /*Para que no se mueva conforme se varie las diemnsiones de la pantalla*/
+    top: 0; /*Separacion a la derecha*/
+    left: 0;
+    color: #fff; /*color de la letra*/
+    overflow-y: auto; /*barra de desplazamiento conforme vaya avanzando, como un scroll*/
+}
+
+.sidebar h4{ /*estilo que solo se aplica al componente h4*/
+    color: #fff;
+}
+
+.sidebar .nav-link{
+    display: block;
+    color: #ffffff;
+    padding: 10px; /*relleno interno de 10px*/
+    text-decoration: none;
+    border-radius: 4px; /*redondea las esquinas de los enlaces*/
+    margin-bottom: 10px; /*añade una margen inferior en los enlaces*/
+}
+
+.sidebar .nav-link.active, .sidebar .nav-link:hover{
+    background-color: #c22f3b;
+    color: #ffffff;
+}
+
+.content{
+    margin-left: 15%;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: calc(30% - 20px);
+    height: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-body{
+    padding: 20px;
+}
+
+.card-title{
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+.card-text{
+    margin-bottom: 15px;
+}
+
+.btn-primary{
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-primary:hover{
+    background-color: #0056b3;
+}
+
+/*Para cuando se minice la pantalla se sobreescribe */
+@media(max-width: 768px){
+    .content{
+        margin-left: 0;
+        padding-top: 0;
+    }
+    .card{
+        width: 100%;
+        height: 220px;
+    }
+}
