@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const ceramic = {
+        const sale = {
             codSale: codSale,
             codCeramic: codCeramic,
             payment: payment,
