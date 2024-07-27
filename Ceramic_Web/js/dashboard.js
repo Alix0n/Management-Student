@@ -15,14 +15,12 @@ document.getElementById('button-ceramics').addEventListener('click', function(ev
 document.getElementById('button-borrow').addEventListener('click', function(event){
     event.preventDefault();
     window.location.href = './sales.html'; 
-    alert('¡Botón clickeado!');
 
 });
 
 document.getElementById('button-users').addEventListener('click', function(event){
     event.preventDefault();
     window.location.href = './users.html'; 
-    alert('¡Botón clickeado!');
 
 });
 
