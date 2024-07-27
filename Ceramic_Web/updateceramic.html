@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actualizar Cerámica</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/updateceramic.css">
+</head>
+<body>
+    <div class="card add">
+        <div class="card-body">
+            <h5 class="card-title">Actualizar Cerámica</h5>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="input-code" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="input-code">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-material" class="form-label">Material</label>
+                    <input type="text" class="form-control" id="input-material">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-color" class="form-label">Color</label>
+                    <input type="text" class="form-control" id="input-color">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-form" class="form-label">Forma</label>
+                    <input type="text" class="form-control" id="input-form">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-acabado" class="form-label">Acabado</label>
+                    <select id="input-acabado" class="form-select">
+                        <option selected>Elige...</option>
+                        <option value="Mate">Mate</option>
+                        <option value="Brillante">Brillante</option>
+                        <option value="Satinado">Satinado</option>
+                        <option value="Texturizado">Texturizado</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="input-price" class="form-label">Precio</label>
+                    <input type="text" class="form-control" id="input-price">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-stock" class="form-label">Stock</label>
+                    <input type="text" class="form-control" id="input-stock">
+                </div>
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" id="button-update">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/updateceramic.js"></script>
+</body>
+</html>
