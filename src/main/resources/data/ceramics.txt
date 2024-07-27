@@ -1,6 +1,3 @@
-CER2;Porcelain;Blue;Hexagon;Glossy;22.3;50
-CER3;Marble;Ga;Rectangle;a;45.0;500
-CER4;Porcelain;Blue;Hexagon;Glossy;22.3;50
-CER5;Marble;Ga;Rectangle;a;45.0;500
+CER4;Ceramica;Negro;Circular;Brillante;23.0;500
 CER6;Porcelain;Blue;Hexagon;Glossy;22.3;50
 CER7;Marble;Ga;Rectangle;a;45.0;500
