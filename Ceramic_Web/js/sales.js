@@ -94,11 +94,11 @@ content.appendChild(cardAdd);
             btnEliminar.className = 'btn-danger';
             btnEliminar.id = `btn-delete-${sale.codSale}`;
             btnEliminar.textContent = `Eliminar`;
-            btnEliminar.setAttribute('data-code', sale.codSale);
+            btnEliminar.setAttribute('data-code-sale', sale.codSale);
 
             // Agregar event listener al botón
             btnEliminar.addEventListener('click', function() {
-                const cosSale = this.getAttribute('data-code');
+                const codSale = this.getAttribute('data-code-sale');
                 deleteSaleById(codSale);
             });
 
@@ -145,7 +145,7 @@ function cleanContent(){
     content.innerHTML = "";
 }
 
-function deleteSaleById(code){
+function deleteSaleById(codSale){
     let url = 'http://localhost:8080/Ceramic/rest/ManagementSale/deleteSale?codSale='+codSale;
     fetch(url, {
         method: 'DELETE'

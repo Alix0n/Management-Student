@@ -1,3 +1,4 @@
 SALE1;CER1;Credit Card;15.5;5
 SALE2;CER1;Cash;20.0;10
 SALE3;CER3;Debit Card;30.0;8000
+

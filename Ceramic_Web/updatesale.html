@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actualizar Venta</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/updatesale.css">
+</head>
+<body>
+    <div class="card add">
+        <div class="card-body">
+            <h5 class="card-title">Actualizar Venta</h5>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="input-code" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="input-code">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-codCeramic" class="form-label">Codigo Ceramica</label>
+                    <input type="text" class="form-control" id="input-codCeramic">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-payment" class="form-label">Metodo de Pago</label>
+                    <select id="input-payment" class="form-select">
+                        <option selected>Elige...</option>
+                        <option value="Mate">Cash</option>
+                        <option value="Brillante">Debit Card</option>
+                        <option value="Satinado">Credit Card</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="input-priceSale" class="form-label">Precio</label>
+                    <input type="text" class="form-control" id="input-priceSale">
+                </div>
+                <div class="col-md-6">
+                    <label for="input-quantitySold" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" id="input-quantitySold">
+                   
+                </div>
+                
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" id="button-update">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/updatesale.js"></script>
+</body>
+</html>
