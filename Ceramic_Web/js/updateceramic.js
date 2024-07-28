@@ -17,15 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+       // Validar que price y stock sean valores numéricos
+       if (isNaN(price) || isNaN(stock) || price.trim() === "" || stock.trim() === "") {
+        alert("Debe ingresar valores correctos para el precio y el stock.");
+        return;
+        }
+
         const ceramic = {
-            code: code,
-            material: material,
-            color: color,
-            form: form,
-            acabado: acabado,
-            price: price,
-            stock: stock
-        };
+        code: code,
+        material: material,
+        color: color,
+        form: form,
+        acabado: acabado,
+        price: parseFloat(price),
+        stock: parseInt(stock)
+    };
 
         fetch('http://localhost:8080/Ceramic/rest/ManagementCeramic/updateCeramic', {
             method: 'PUT',

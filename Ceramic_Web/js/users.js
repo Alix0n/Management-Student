@@ -62,13 +62,13 @@ function loadUsers() {
 
                 const btnEliminar = document.createElement('button');
                 btnEliminar.className = 'btn btn-danger';
-                btnEliminar.id = `btn-delete-${user.nameUser}`;
+                btnEliminar.id = `btn-delete-${user.code}`;
                 btnEliminar.textContent = `Eliminar`;
-                btnEliminar.setAttribute('data-code-user', user.nameUser);
+                btnEliminar.setAttribute('data-code', user.code);
 
                 btnEliminar.addEventListener('click', function() {
-                    const nameUser = this.getAttribute('data-code-user');
-                    deleteUserById(nameUser);
+                    const code = this.getAttribute('data-code');
+                    deleteUserById(code);
                 });
 
                 const btnActualizar = document.createElement('a');
@@ -98,8 +98,8 @@ function cleanContent() {
     content.innerHTML = "";
 }
 
-function deleteUserById(nameUser) {
-    const url = `http://localhost:8080/Ceramic/rest/ManagementUser/deleteUser?user=${nameUser}`;
+function deleteUserById(code) {
+    const url = `http://localhost:8080/Ceramic/rest/ManagementUser/deleteUser?code=${code}`;
     fetch(url, { method: 'DELETE' })
         .then(response => {
             if (!response.ok) {

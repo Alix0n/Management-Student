@@ -6,7 +6,7 @@
 form {
     width: 350px;
     height:400px;
-    background-color: brown;
+    background-color: rgb(249, 90, 212);
     padding-top: 20px;
     margin: 50px auto;
     border-top-right-radius: 20px;
@@ -15,7 +15,7 @@ form {
 }
 
 h1{
-    color: white;
+    color: black;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30 px;
@@ -29,7 +29,7 @@ input{
 }
 
 label{
-    color: white;
+    color: black;
     display: block;
     margin: 15px;
     font-size: 20px;
@@ -42,10 +42,10 @@ input[type= 'button']{
     margin-top: 20px;
     font-size: 20px;
     display: block;
-    background-color: chocolate;
+    background-color: rgb(72, 59, 216);
     cursor: pointer; /*hace que salga la manito*/
 }
 
 input[type= 'button']:hover{
-    background-color: coral; /*cambia el color del fondo del boton*/
+    background-color: rgb(103, 204, 247); /*cambia el color del fondo del boton*/
 }
