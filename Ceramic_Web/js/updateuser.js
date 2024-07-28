@@ -4,20 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     updateButton.addEventListener('click', function(event) {
         event.preventDefault();
 
-        const nameUser = document.getElementById('input-code').value;
+        const code = document.getElementById('input-code').value;
+        const nameUser = document.getElementById('input-user').value;
         const password = document.getElementById('input-password').value;
 
-        if (!nameUser || !password) {
+        if (!code || !nameUser || !password) {
             alert('Por favor complete todos los campos.');
             return;
         }
 
         const user = {
+            code: code,
             nameUser: nameUser,
             password: password
         };
 
-        fetch('http://localhost:8080/Ceramic/rest/ManagementUser/updateUser', {
+        fetch(' http://localhost:8080/Ceramic/rest/ManagementUser/updateUser', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
