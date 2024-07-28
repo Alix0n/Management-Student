@@ -42,10 +42,10 @@ input[type= 'button']{
     margin-top: 20px;
     font-size: 20px;
     display: block;
-    background-color: rgb(72, 59, 216);
+    background-color: rgb(60, 122, 255);
     cursor: pointer; /*hace que salga la manito*/
 }
 
 input[type= 'button']:hover{
-    background-color: rgb(103, 204, 247); /*cambia el color del fondo del boton*/
+    background-color: rgb(155, 220, 248); /*cambia el color del fondo del boton*/
 }

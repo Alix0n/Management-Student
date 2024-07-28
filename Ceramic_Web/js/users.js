@@ -8,7 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+
     loadUsers();
+});
+
+document.getElementById('button-ceramics').addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = './dashboard.html';
+});
+document.getElementById('button-borrow').addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = './sales.html'; 
+
+});
+
+document.getElementById('button-users').addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = './users.html'; 
+
 });
 
 function loadUsers() {

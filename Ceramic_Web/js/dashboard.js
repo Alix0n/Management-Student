@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 document.getElementById('button-ceramics').addEventListener('click', function(event){
     event.preventDefault();
-    alert('¡Botón clickeado!');
+    window.location.href = './dashboard.html'; 
 });
 document.getElementById('button-borrow').addEventListener('click', function(event){
     event.preventDefault();
