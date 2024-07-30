@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Cerámica</title>
+    <link rel="stylesheet" href="css/seeceramic.css">
+</head>
+<body>
+    <div class="query-container">
+        <h2>Consultar Cerámica</h2>
+        <form id="queryCeramicForm">
+            <div class="query-row">
+                <label for="query-code">Código de Cerámica:</label>
+                <input type="text" id="query-code" name="query-code" required>
+            </div>
+            <div class="query-row">
+                <button type="submit">Consultar</button>
+            </div>
+        </form>
+        <div class="result-container">
+            <h3>Resultados de la Consulta:</h3>
+            <div id="result">
+                <!-- Aquí se mostrarán los resultados -->
+            </div>
+        </div>
+    </div>
+    <script src="js/seeceramic.js"></script>
+</body>
+</html>
