@@ -1,41 +1,41 @@
-body{
-    display: flex; /*Utiliza el modelo de caja flexible para el diseño de la pagina*/
-    min-height: 100vh; /*Establece una altura minima de la pnatalla completa*/
-    margin: 0; /*Elimina el margen predeterminado del cuerpo*/
-    font-family: Arial, sans-serif; /*Establece la fuente de texto*/
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.sidebar{
+.sidebar {
     width: 12.5%;
     background-color: #f69bc5;
     padding: 20px;
     height: 100vh;
-    position: fixed; /*Para que no se mueva conforme se varie las diemnsiones de la pantalla*/
-    top: 0; /*Separacion a la derecha*/
+    position: fixed;
+    top: 0;
     left: 0;
-    color: #000; /*color de la letra*/
-    overflow-y: auto; /*barra de desplazamiento conforme vaya avanzando, como un scroll*/
+    color: #000;
+    overflow-y: auto;
 }
 
-.sidebar h4{ /*estilo que solo se aplica al componente h4*/
+.sidebar h4 {
     color: #000;
 }
 
-.sidebar .nav-link{
+.sidebar .nav-link {
     display: block;
     color: #000;
-    padding: 10px; /*relleno interno de 10px*/
+    padding: 10px;
     text-decoration: none;
-    border-radius: 4px; /*redondea las esquinas de los enlaces*/
-    margin-bottom: 10px; /*añade una margen inferior en los enlaces*/
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
-.sidebar .nav-link.active, .sidebar .nav-link:hover{
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
     background-color: #c22fc2;
     color: #000;
 }
 
-.content{
+.content {
     margin-left: 15%;
     padding: 20px;
     flex: 1;
@@ -43,7 +43,7 @@ body{
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -51,88 +51,119 @@ body{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: calc(30% - 20px);
-    height: 45%;
     display: inline-block;
     vertical-align: top;
 }
 
-.card-body{
+.card-body {
     padding: 20px;
 }
 
-.card-title{
+.card-title {
     font-size: 1.25em;
     margin-bottom: 10px;
 }
 
-.card-text{
+.card-text {
     margin-bottom: 15px;
 }
 
-.btn-primary{
+.btn-primary {
     display: inline-block;
     padding: 10px 15px;
     color: #fff;
     background-color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
+    margin-bottom: 15px;
 }
 
-.btn-primary:hover{
+.btn-primary img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-primary:hover {
     background-color: #87e17c;
 }
 
 .btn-danger {
-    display: inline-block; /* Muestra los botones como elementos en línea de bloque */
-    padding: 10px 15px; /* Añade un relleno interno de 10px en la parte superior e inferior y 15px en los lados */
-    color: #fdfdfd; /* Establece el color del texto en blanco */
-    background-color: #dc6057; /* Establece el color de fondo azul */
-    text-decoration: none; /* Elimina el subrayado de los botones */
-    border-radius: 4px; /* Redondea las esquinas de los botones */
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fdfdfd;
+    background-color: #dc6057;
+    text-decoration: none;
+    border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .btn-danger:hover {
-    background-color: #FE6D66; /* Establece un color de fondo más oscuro cuando el botón se desplaza sobre él */
-  }
-  
-  .btn-success {
-    display: inline-block; /* Muestra los botones como elementos en línea de bloque */
-    padding: 10px 15px; /* Añade un relleno interno de 10px en la parte superior e inferior y 15px en los lados */
-    color: #fff; /* Establece el color del texto en blanco */
-    background-color: #50BF07; /* Establece el color de fondo azul */
-    text-decoration: none; /* Elimina el subrayado de los botones */
-    border-radius: 4px; /* Redondea las esquinas de los botones */
+    margin-bottom: 15px;
+}
+
+.btn-danger img {
+    width: 24px;
+    height: 24px;
+
+}
+
+.btn-danger:hover {
+    background-color: #fa7c72;
+}
+
+.btn-other {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fdfdfd;
+    background-color: #eeff01;
+    text-decoration: none;
+    border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .margin{
-    margin-left: 2%;
-  }
-  
-  .btn-success:hover {
-    background-color: #9AD672; /* Establece un color de fondo más oscuro cuando el botón se desplaza sobre él */
-  }
+    margin-bottom: 15px;
+}
 
-  h3{
-    font-weight: bold;
-    margin-top: 12.5%;
-  }
+.btn-other img {
+    width: 24px;
+    height: 24px;
+
+}
+
+.btn-other:hover {
+    background-color: #e9f982;
+}
 
 
-/*Para cuando se minice la pantalla se sobreescribe */
-@media(max-width: 768px){
-    .sidebar {
-        width: 80%; /* Establece el ancho de la barra lateral al 100% del contenedor */
-        height: auto; /* Permite que la altura de la barra lateral se ajuste automáticamente */
-        position: relative; /* Cambia la posición de la barra lateral a relativa */
-      }
-    .content{
-        margin-left: 0;
-        padding-top: 0;
-    }
-    .card{
-        width: 100%;
-        height: 220px;
-    }
+.btn-success {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-success img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-success:hover {
+    background-color: #5dc268;
+}
+
+.margin {
+    margin-left: 5px;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#content {
+    padding: 30px;
+    width: 85%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: center; 
 }
