@@ -1,6 +1,7 @@
 body{
     display: flex; /*Utiliza el modelo de caja flexible para el diseño de la pagina*/
     min-height: 100vh; /*Establece una altura minima de la pnatalla completa*/
+    background-color: #a7d3f7;
     margin: 0; /*Elimina el margen predeterminado del cuerpo*/
     font-family: Arial, sans-serif; /*Establece la fuente de texto*/
 }
@@ -19,6 +20,11 @@ body{
 
 .sidebar h4{ /*estilo que solo se aplica al componente h4*/
     color: #000;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-align: center; /* Esta línea centra el texto en los elementos <h3> */
 }
 
 .sidebar .nav-link{
@@ -51,13 +57,13 @@ body{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: calc(30% - 20px);
-    height: 45%;
     display: inline-block;
     vertical-align: top;
 }
 
 .card-body{
     padding: 20px;
+    text-align: center;
 }
 
 .card-title{
@@ -76,6 +82,7 @@ body{
     background-color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .btn-primary:hover{
@@ -114,6 +121,22 @@ body{
     background-color: #9AD672; /* Establece un color de fondo más oscuro cuando el botón se desplaza sobre él */
   }
 
+  .btn-other {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fdfdfd;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+
+.btn-other:hover {
+    background-color: #e9f982;
+}
+
   h3{
     font-weight: bold;
     margin-top: 12.5%;
@@ -135,4 +158,13 @@ body{
         width: 100%;
         height: 220px;
     }
+}
+
+#content {
+    padding: 30px;
+    width: 85%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: center; 
 }

@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const queryForm = document.getElementById('queryCeramicForm');
+    const queryForm = document.getElementById('querySaleForm');
 
     queryForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const code = document.getElementById('query-code').value;
-        fetchCeramicByCode(code);
+        event.preventDefault(); // Evita el envío tradicional del formulario
+        const codSale = document.getElementById('query-code').value;
+        fetchSaleByCode(codSale);
     });
 });
 
-function fetchCeramicByCode(code) {
-    const url = `http://localhost:8080/Ceramic/rest/ManagementCeramic/getCeramicsByCode?code=${code}`;
+function fetchSaleByCode(codSale) {
+    const url = `http://localhost:8080/Ceramic/rest/ManagementSale/getSalesByCode?codSale=${codSale}`;
     
     fetch(url)
         .then(response => {
             if (response.status === 204) {
                 // Si el usuario no se encuentra, muestra una alerta
-                alert('Ceramica no encontrada');
+                alert('Venta no encontrada');
                 cleanContent();
                 return;
             }
@@ -23,12 +23,12 @@ function fetchCeramicByCode(code) {
         })
         .then(response => response.json())
         .then(data => {
-            displayCeramic(data);
+            displaySale(data);
         })
         .catch(error => console.error('Error:', error));
 }
 
-function displayCeramic(ceramic) {
+function displaySale(sale) {
     const resultContainer = document.getElementById('result');
     resultContainer.innerHTML = '';
 
@@ -40,59 +40,48 @@ function displayCeramic(ceramic) {
 
     const title = document.createElement('h2');
     title.className = 'card-title';
-    title.textContent = ceramic.code;
+    title.textContent = sale.codSale;
 
-    const material = document.createElement('p');
-    material.className = 'card-text';
-    material.textContent = `Material: ${ceramic.material}`;
+    const codCeramic = document.createElement('p');
+    codCeramic.className = 'card-text';
+    codCeramic.textContent = `Código de Cerámica: ${sale.codCeramic}`;
 
-    const color = document.createElement('p');
-    color.className = 'card-text';
-    color.textContent = `Color: ${ceramic.color}`;
+    const payment = document.createElement('p');
+    payment.className = 'card-text';
+    payment.textContent = `Método de Pago: ${sale.payment}`;
 
-    const form = document.createElement('p');
-    form.className = 'card-text';
-    form.textContent = `Forma: ${ceramic.form}`;
+    const priceSale = document.createElement('p');
+    priceSale.className = 'card-text';
+    priceSale.textContent = `Precio: ${sale.priceSale}`;
 
-    const acabado = document.createElement('p');
-    acabado.className = 'card-text';
-    acabado.textContent = `Acabado: ${ceramic.acabado}`;
-
-    const price = document.createElement('p');
-    price.className = 'card-text';
-    price.textContent = `Precio: ${ceramic.price}`;
-
-    const stock = document.createElement('p');
-    stock.className = 'card-text';
-    stock.textContent = `Stock: ${ceramic.stock}`;
+    const quantitySold = document.createElement('p');
+    quantitySold.className = 'card-text';
+    quantitySold.textContent = `Cantidad: ${sale.quantitySold}`;
 
     const btnEliminar = document.createElement('button');
     btnEliminar.className = 'btn-danger';
     btnEliminar.textContent = 'Eliminar';
-    btnEliminar.setAttribute('data-code', ceramic.code); // Asegurarse de que el código se pase correctamente
+    btnEliminar.setAttribute('data-code', sale.codSale);
 
     btnEliminar.addEventListener('click', function() {
-        const ceramicCode = this.getAttribute('data-code');
-        deleteCeramicById(ceramicCode);
+        const codSale = this.getAttribute('data-code');
+        deleteSaleById(codSale);
     });
 
     const btnActualizar = document.createElement('button');
     btnActualizar.className = 'btn-success margin';
     btnActualizar.textContent = 'Actualizar';
 
-    // Agregar event listener al botón
     btnActualizar.addEventListener('click', function() {
-        localStorage.setItem("ceramicData", JSON.stringify(ceramic));
-        window.location.href = "./updateceramic.html";
+        localStorage.setItem("saleData", JSON.stringify(sale));
+        window.location.href = "./updatesale.html";
     });
 
     cardBody.appendChild(title);
-    cardBody.appendChild(material);
-    cardBody.appendChild(color);
-    cardBody.appendChild(form);
-    cardBody.appendChild(acabado);
-    cardBody.appendChild(price);
-    cardBody.appendChild(stock);
+    cardBody.appendChild(codCeramic);
+    cardBody.appendChild(payment);
+    cardBody.appendChild(priceSale);
+    cardBody.appendChild(quantitySold);
     cardBody.appendChild(btnEliminar);
     cardBody.appendChild(btnActualizar);
 
@@ -105,8 +94,8 @@ function cleanContent() {
     content.innerHTML = "";
 }
 
-function deleteCeramicById(code) {
-    let url = `http://localhost:8080/Ceramic/rest/ManagementCeramic/deleteCeramic?code=${code}`;
+function deleteSaleById(codSale) {
+    let url = `http://localhost:8080/Ceramic/rest/ManagementSale/deleteSale?codSale=${codSale}`;
     
     fetch(url, {
         method: 'DELETE'

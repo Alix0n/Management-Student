@@ -47,11 +47,37 @@ function loadUsers() {
     const lblAdd = document.createElement('h3');
     lblAdd.textContent = '¡Añade una usuario!';
 
+    const cardBodySearch = document.createElement('div');
+    cardBodySearch.className = 'card-body';
+
+    const btnSearch = document.createElement('a');
+    btnSearch.className = 'btn btn-other';
+    btnSearch.href = './seeusers.html';
+
+    const imgSearch = document.createElement('img');
+    imgSearch.src = 'resource/icons/Consultar.png';
+
+    const lblSearch = document.createElement('h3');
+    lblSearch.textContent = '¡Puedes consultar una ceramica!';
+
+    /** Se agrega el ícono el botón */
     btnAdd.appendChild(imgAdd);
+    btnSearch.appendChild(imgSearch);
+
+    /** Se agrega botón y título al cuerpo de la carta */
     cardBodyAdd.appendChild(btnAdd);
     cardBodyAdd.appendChild(lblAdd);
+
+    cardBodySearch.appendChild(btnSearch);
+    cardBodySearch.appendChild(lblSearch);
+
     cardAdd.appendChild(cardBodyAdd);
+    cardAdd.appendChild(cardBodySearch);
+
+
     content.appendChild(cardAdd);
+
+    
 
     fetch('http://localhost:8080/Ceramic/rest/ManagementUser/getUsers')
         .then(response => response.json())

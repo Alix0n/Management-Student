@@ -58,19 +58,39 @@ imgDelete.src = 'resource/icons/eliminar.png';
 const lblDelete = document.createElement('h3');
 lblDelete.textContent = '¡Eliminar venta!';
 
+const cardBodySearch = document.createElement('div');
+cardBodySearch.className = 'card-body';
+
+const btnSearch = document.createElement('a');
+btnSearch.className = 'btn btn-other';
+btnSearch.href = './seesales.html';
+
+const imgSearch = document.createElement('img');
+imgSearch.src = 'resource/icons/Consultar.png';
+
+const lblSearch = document.createElement('h3');
+lblSearch.textContent = '¡Puedes consultar una venta!';
+
 /** Se agrega el ícono el botón */
 btnAdd.appendChild(imgAdd);
 btnDelete.appendChild(imgDelete);
+btnSearch.appendChild(imgSearch);
 
 /** Se agrega botón y título al cuerpo de la carta */
 cardBodyAdd.appendChild(btnAdd);
 cardBodyAdd.appendChild(lblAdd);
 
+cardBodySearch.appendChild(btnSearch);
+cardBodySearch.appendChild(lblSearch);
+
 cardBodyDelete.appendChild(btnDelete);
 cardBodyDelete.appendChild(lblDelete);
 
+
 cardAdd.appendChild(cardBodyAdd);
 cardAdd.appendChild(cardBodyDelete);
+cardAdd.appendChild(cardBodySearch);
+
 
 content.appendChild(cardAdd);
 
